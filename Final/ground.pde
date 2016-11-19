@@ -4,6 +4,8 @@ class Ground {
   float yLine;
   float rectLength;
   float rectHeight;
+  float xpos;
+  float xposLimit;
 
   Ground (float tXpoint, float tYline, float tRectLength, float tRectHeight) {
     xPoint  = tXpoint;
@@ -16,6 +18,15 @@ class Ground {
     fill(85, 255, 17);
     rect(xPoint, yLine, rectLength, rectHeight);
     fill(255, 188, 94);
-    rect(xPoint, yLine+20, rectLength, rectHeight);
+    rect(xPoint, yLine+30, rectLength, rectHeight);
+  }
+  void displayOnMenu(float tXpos) {
+    xpos  = menbar.menuX+menbar.menuWidth;
+    xposLimit = tXpos;
+    
+    fill(85,255,17);
+    rect(xpos, yLine, rectLength, rectHeight);
+    fill(255,188,94);
+    rect(xpos,yLine+30, rectLength, rectHeight);
   }
 }
