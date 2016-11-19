@@ -1,4 +1,4 @@
-//Should be adapatable for the landsccape mode
+//Should be adapatable for the landscape mode
 class Ground {
   float xPoint;
   float yLine;
@@ -23,7 +23,7 @@ class Ground {
   void displayOnMenu(float tXpos) {
     xpos  = menbar.menuX+menbar.menuWidth;
     xposLimit = tXpos;
-    
+    noStroke();
     fill(85,255,17);
     rect(xpos, yLine, rectLength, rectHeight);
     fill(255,188,94);
