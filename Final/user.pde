@@ -26,7 +26,7 @@ class User {
     rect(xPos-size/2, yPos, size, size);
   }
   void handler() {
-    if ((speed < 0.65) && ( yPos+size > ground.yLine)) {
+    if ((speed < 0.1) && ( yPos+size > ground.yLine)) {
       speed = 0;
       gravity = 0;
     } else if ( yPos+size >ground.yLine) {
