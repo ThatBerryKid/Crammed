@@ -93,11 +93,7 @@ void draw() {
     fill(20, 205, 0);}
     rect(ground.xPoint+70, ground.yLine+50, 150, 55);
     
-    
-    //fill(20, 205, 0);
-    //rect(ground.xPoint+70, ground.yLine+50, 150, 55);
     if (mousePressed && mouseX>ground.xPoint+70 && mouseX<ground.xPoint+220 && mouseY>ground.yLine+50 && mouseY<ground.yLine+105) {
-    //fill(205, 20, 0);
       gamePiece1 = new GamePiece(gamp1);
       gamePiece2 = new GamePiece2(gamp2);
       start = 0;
@@ -204,14 +200,6 @@ void draw() {
 }
 
 //Draw Ends//
-
-//void wallControlNTime(){
-//    time=millis();
-//    if (gamePiece1.gampx == gamePiece1.gampxLim-gamePiece1.gamepWidth && time-zero >=8000){
-//    gamePiece1.gampx=width;
-//    zero=time-2000;
-//    }
-//}
 
 void colorChange() {
   if (mousePressed)
