@@ -200,7 +200,7 @@ void draw() {
     //back button on Menu2
     menbar.backBtn();
     //button press
-    if (mousePressed && mouseX > 0 && mouseX<30 && mouseY>height/9.5 && mouseY<height/9.5+40) {
+    if (mousePressed && mouseX > 10 && mouseX<70 && mouseY>height/9.5 && mouseY<height/9.5+40) {
       user = new User(objCol, width-width/5, height/2-60, 80, 0.65, 1.5);
       menu =1;
       start =0;
@@ -223,7 +223,7 @@ void draw() {
 
     if (landscapeMode!= true) {
       noStroke();
-      user.displayOnCustom();
+      user.displayOnCustom(width/11,height/4,250);
       //rect(width/11, height/4, 250, 250);
       if (userImg !=null) {
         image(userImg, width/11, height/4, 250, 250);
@@ -329,16 +329,19 @@ void colorChange() {
   {
     user.changeCol(objColNew);
     objCol = objColNew;
+    userImg = null;
   }
   if (mousePressed && mouseX> width/11+95 && mouseX<width/11+155 && mouseY>(height/4)*3 && mouseY<((height/4)*3)+60)
   {
     user.changeCol(color(6,45,128));
     objCol=color(6,45,128);
+    userImg = null;
   }
     if (mousePressed && mouseX> width/11 && mouseX<width/11+60 && mouseY>(height/4)*3 && mouseY<((height/4)*3)+60)
   {
     user.changeCol(color(205,4,0));
     objCol=color(205,4,0);
+    userImg = null;
   }
 }
 
